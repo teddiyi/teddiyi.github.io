@@ -88,7 +88,7 @@ h4 { font-size:16px; line-height:1.55; font-weight:700; margin:0 0 7px; color:va
 .cv-copy { position:relative; z-index:1; }
 .cv-copy .eyebrow { margin-bottom:8px; }
 .cv-section h2 { color:var(--navy); margin:0 0 5px; font-size:34px; }
-.cv-copy > p:last-child { color:var(--muted); font-size:14px; margin:0; }
+.cv-copy > p:last-child { color:var(--muted); font-size:13px; letter-spacing:-.15px; margin:0; white-space:nowrap; }
 .cv-section .button-secondary { position:relative; z-index:1; flex:none; border:0; border-radius:10px; padding:14px 20px; color:#fff; background:var(--navy); box-shadow:0 8px 18px rgba(16,37,65,.18); }
 .cv-section .button-secondary:hover { color:#fff; background:var(--blue-dark); border-color:transparent; }
 footer { border-top:1px solid var(--line); color:var(--muted); font-size:12px; padding:20px 0; }
@@ -117,6 +117,7 @@ footer { border-top:1px solid var(--line); color:var(--muted); font-size:12px; p
  .publications li { padding-left:4px; }
  .cv-section { align-items:flex-start; flex-direction:column; gap:18px; margin-top:40px; padding:26px 23px; }
  .cv-section h2 { font-size:30px; }
+ .cv-copy > p:last-child { font-size:12px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button,.interest { transition:none; } }
 @media print { header,.profile,footer,.skip { display:none; } .layout { display:block; padding:0; } .wrap { max-width:none; padding:0; } section,article { break-inside:avoid; } }
