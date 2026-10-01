@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#home">Skip to content</a>
-<header><div class="wrap header-inner"><a class="brand" href="#home"><span class="brand-mark">ZY</span><span>Zixi (Teddi) Yi</span></a><nav aria-label="Main navigation"><a href="#home">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="files/zixi-yi-academic-cv.pdf" target="_blank" rel="noopener">CV</a></nav></div></header>
+<header><div class="wrap header-inner"><a class="brand" href="#home"><span class="brand-mark">ZY</span><span>Zixi (Teddi) Yi</span></a><nav aria-label="Main navigation"><a href="#home">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="life.html">Life ↗</a><a href="files/zixi-yi-academic-cv.pdf" target="_blank" rel="noopener">CV</a><button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"><span aria-hidden="true">☼</span></button></nav></div></header>
 <div class="wrap layout">
 <!-- 个人信息：更换照片时，替换 assets/zixi-yi.jpg。 -->
 <aside class="profile" aria-label="Profile and contact">
@@ -66,14 +66,14 @@
 <h3 class="group-heading manuscript-heading">Manuscripts</h3>
 <ol class="publications" start="3">
 <li><article>
-<a class="paper-thumbnail" href="files/yi-conditioning-aware.pdf#page=34" target="_blank" rel="noopener"><img src="assets/publications/spectral-geometry.png" alt="Brain, Spot and Duck surface reconstructions at different spectral degrees" loading="lazy"></a>
+<a class="paper-thumbnail" href="files/yi-conditioning-aware.pdf#page=34" target="_blank" rel="noopener"><img src="assets/publications/spectral-geometry.gif?v=20260930-2" alt="Animated Duck surface reconstruction rotating through second-order spectral geometry" loading="lazy"></a>
 <p class="authors"><strong>Yi Z</strong>, Choi GPT.</p>
 <h4>Conditioning-Aware Surface Parameterization for Finite Spectral Geometry.</h4>
 <p class="status">Unpublished manuscript.</p>
 <div class="paper-links"><a href="files/yi-conditioning-aware.pdf">Manuscript PDF</a></div>
 </article></li>
 <li><article>
-<a class="paper-thumbnail" href="files/yi-lymph-node-analysis.pdf#page=5" target="_blank" rel="noopener"><img src="assets/publications/surface-smoothing.png" alt="Graphical abstract: geometric quantification and multi-resolution shape analysis for axillary lymph-node metastasis" loading="lazy"></a>
+<a class="paper-thumbnail" href="files/yi-lymph-node-analysis.pdf#page=5" target="_blank" rel="noopener"><img src="assets/publications/lymph-node.gif" alt="Animated lymph-node surface reconstructions across spectral degrees" loading="lazy"></a>
 <p class="authors"><strong>Yi Z</strong>, Qu L, Choi GPT.</p>
 <h4>An integrated geometric quantification and shape analysis framework for axillary lymph node metastasis in breast cancer patients.</h4>
 <p class="status">arXiv preprint · 2026.</p>
@@ -85,5 +85,24 @@
 <section id="cv" class="cv-section"><div class="cv-copy"><p class="eyebrow">Professional profile</p><h2>Curriculum vitae</h2><p>Explore my academic background, research experience, and current work.</p></div><a class="button button-secondary" href="files/zixi-yi-academic-cv.pdf" target="_blank" rel="noopener">View my CV <span aria-hidden="true">↗</span></a></section>
 </main></div>
 <footer><div class="wrap">© 2026 Zixi (Teddi) Yi</div></footer>
+<script>
+(() => {
+  const button = document.querySelector('.theme-toggle');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme-v2');
+  const setTheme = (dark) => {
+    root.dataset.theme = dark ? 'dark' : 'light';
+    button.setAttribute('aria-pressed', String(dark));
+    button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    button.querySelector('span').textContent = dark ? '☾' : '☼';
+  };
+  setTheme(saved === 'dark');
+  button.addEventListener('click', () => {
+    const dark = root.dataset.theme !== 'dark';
+    setTheme(dark);
+    localStorage.setItem('theme-v2', dark ? 'dark' : 'light');
+  });
+})();
+</script>
 </body>
 </html>
