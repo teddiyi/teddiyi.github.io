@@ -88,7 +88,6 @@ h4 { font-size:16px; line-height:1.55; font-weight:700; margin:0 0 7px; color:va
 .cv-copy { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; text-align:center; transform:translateY(-2px); }
 .cv-copy .eyebrow { margin-bottom:8px; }
 .cv-section h2 { color:var(--navy); margin:0 0 5px; font-size:34px; }
-.cv-copy > p:last-child { color:var(--muted); font-size:13px; letter-spacing:-.15px; margin:0; white-space:nowrap; }
 .cv-section .button-secondary { position:absolute; z-index:1; right:38px; top:50%; transform:translateY(-50%); flex:none; border:0; border-radius:10px; padding:14px 20px; color:#fff; background:var(--navy); box-shadow:0 8px 18px rgba(16,37,65,.18); }
 .cv-section .button-secondary:hover { transform:translateY(calc(-50% - 2px)); }
 .cv-section .button-secondary:hover { color:#fff; background:var(--blue-dark); border-color:transparent; }
@@ -121,7 +120,6 @@ footer { border-top:1px solid var(--line); color:var(--muted); font-size:12px; p
  .cv-section .button-secondary { position:static; transform:none; }
  .cv-section .button-secondary:hover { transform:translateY(-2px); }
  .cv-section h2 { font-size:30px; }
- .cv-copy > p:last-child { font-size:12px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button,.interest { transition:none; } }
 @media print { header,.profile,footer,.skip { display:none; } .layout { display:block; padding:0; } .wrap { max-width:none; padding:0; } section,article { break-inside:avoid; } }
@@ -205,8 +203,7 @@ footer { background:#fff; }
   transform:none;
 }
 .cv-copy .eyebrow { margin:0 0 6px; }
-.cv-section h2 { font-size:32px; line-height:1.2; letter-spacing:-.7px; margin:0 0 15px; }
-.cv-copy > p:last-child { max-width:620px; color:var(--muted); font-size:16px; line-height:1.75; letter-spacing:0; white-space:nowrap; }
+.cv-section h2 { font-size:32px; line-height:1.2; letter-spacing:-.7px; margin:0; }
 .cv-section .button-secondary {
   position:relative;
   top:auto;
@@ -227,13 +224,11 @@ footer { background:#fff; }
 .cv-section .button-secondary:hover { transform:translateX(3px); background:transparent; color:var(--blue-dark); border-right-color:var(--blue); border-bottom-color:var(--blue); }
 @media(max-width:900px) {
   .cv-section { padding-right:34px; }
-  .cv-copy > p:last-child { font-size:15px; }
 }
 @media(max-width:650px) {
   .cv-section { min-height:0; align-items:flex-start; flex-direction:column; gap:22px; padding:42px 0 34px; }
   .cv-copy { width:100%; }
   .cv-section h2 { font-size:29px; }
-  .cv-copy > p:last-child { font-size:14px; white-space:normal; }
   .cv-section .button-secondary { position:relative; }
 }
 
